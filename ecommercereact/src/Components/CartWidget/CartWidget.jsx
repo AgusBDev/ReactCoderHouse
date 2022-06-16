@@ -1,9 +1,11 @@
 import React from 'react'
 import { ShoppingCartIcon } from '@heroicons/react/outline'
 
-export default function CartWidget() {
+export default function CartWidget({
+  className
+}) {
   return (
-    <div className="justify-start ml-auto mr-5 flex">
+    <div className={`${className} flex items-center`}>
         <a href="#" className="border-white">       
             <i><ShoppingCartIcon className='w-5 mr-2 mt-0.5'/></i>         
         </a>
