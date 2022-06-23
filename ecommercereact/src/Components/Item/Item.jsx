@@ -1,13 +1,17 @@
 import React from 'react'
+import ItemCount from '../ItemCount/ItemCount';
 
-export default function Item( {nombre} ) {
+export default function Item( {id, nombre} ) {
+
+
 
     return (
-        <div className='flex items-center w-1/3'>
+        <div key={id} className='flex items-center flex-col border border-black'>
             <h5>{nombre}</h5>
             <img src="" alt="" />
-            <h6>{nombre}</h6>    
-            <button>Ver Detalles del producto</button>
+            <h6>{id}</h6>    
+            <button className='border border-black'>Ver Detalles del producto</button>
+            <ItemCount initial={1} stock={5}/>
         </div>
     )
 }

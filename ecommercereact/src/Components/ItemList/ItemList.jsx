@@ -8,22 +8,20 @@ export default function ItemList() {
 
     const [pokemon, setPokemon] = useState([]);
 
-    useEffect(() => {
+    useEffect(() => {      
         fetch(url)
         .then(response => response.json())
         .then(data => (
             setPokemon(data.results)
-        ));
-
-        console.log(pokemon);
+        ));        
     }, [])
 
     return (
-    <div className='flex flex-row w-max'>
+    <div className='flex flex-row justify-around'>
         {
             pokemon.map( (poke, index) => (
-                <div className='w-1/3'>
-                    <Item key={index} nombre={poke.name}/>
+                <div className='w-1/4'>                
+                    <Item id={index} nombre={poke.name}/>
                 </div>
             ))
         }

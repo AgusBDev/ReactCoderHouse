@@ -2,7 +2,15 @@ import React, { useState, useEffect } from 'react'
 import { PlusIcon, MinusIcon } from '@heroicons/react/outline'
 import './ItemCount.css'
 
-export default function ItemCount( { stock, initial, onAdd } ) {
+export default function ItemCount( { stock, initial } ) {
+
+    const onAdd = ( num, cant, stock ) => {
+        if(cant + (num) >= 0 && cant + (num) <= stock){
+          return(cant + (num));
+        }else{
+          return cant;
+        }        
+      }
 
     const [maxStock, setMaxStock] = useState();
     const [cant, setCant] = useState(0);
@@ -13,7 +21,7 @@ export default function ItemCount( { stock, initial, onAdd } ) {
 
     if(stock > 0){
         return (    
-                <div className=' border border-black flex flex-col items-center'>
+                <div className=' border border-black flex flex-col items-center my-2'>
                     <div className="flex justify-center my-2 mx-4  border border-black">
                         <span className='text-center'>
                             <a href="#" onClick={ () => setCant(onAdd(1, cant, maxStock))}>
