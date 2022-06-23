@@ -2,6 +2,7 @@
 import './App.css';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
 import Navbar from './Components/Navbar/Navbar';
+import Api from './Components/componente/Api'
 
 
 function App() {
@@ -13,7 +14,10 @@ function App() {
           </h1>
       </div>
       <Navbar/>
-      <ItemListContainer greeting={"Hola soy un greeting"}/>
+      <div className='container'>
+        <ItemListContainer greeting={"Hola soy un greeting"}/>
+      </div>
+      {/* <Api/> */}
     </header>
   );
 }

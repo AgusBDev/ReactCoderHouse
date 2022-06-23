@@ -1,5 +1,6 @@
 import React from 'react'
 import ItemCount from '../ItemCount/ItemCount';
+import ItemList from '../ItemList/ItemList';
 
 export default function ItemListContainer( {greeting} ) {
 
@@ -14,7 +15,8 @@ export default function ItemListContainer( {greeting} ) {
   return (
     <div className="container mt-12">
         <strong>{greeting}</strong>
-        <ItemCount initial={1} stock={5} onAdd={onAdd}/>
+        <ItemList/>
+        {/* <ItemCount initial={1} stock={5} onAdd={onAdd}/> */}
     </div>
   )
 }

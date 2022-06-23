@@ -12,9 +12,8 @@ export default function ItemCount( { stock, initial, onAdd } ) {
     }, []);
 
     if(stock > 0){
-        return (
-            
-                <div className=' border border-black w-1/4 flex flex-col items-center'>
+        return (    
+                <div className=' border border-black flex flex-col items-center'>
                     <div className="flex justify-center my-2 mx-4  border border-black">
                         <span className='text-center'>
                             <a href="#" onClick={ () => setCant(onAdd(1, cant, maxStock))}>
