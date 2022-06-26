@@ -4,7 +4,7 @@ import Item from '../Item/Item'
 
 export default function ItemList() {
 
-    const url = 'https://pokeapi.co/api/v2/pokemon?limit=3&offset=0';
+    const url = 'https://pokeapi.co/api/v2/pokemon?limit=10&offset=0';
 
     const [pokemon, setPokemon] = useState([]);
 
@@ -17,10 +17,11 @@ export default function ItemList() {
     }, [])
 
     return (
-    <div className='flex flex-row justify-around'>
+    <div className='grid grid-cols-4 gap-20'>
         {
             pokemon.map( (poke, index) => (
-                <div className='w-1/4'>                
+                <div className=''>     
+                    {console.log(index)}           
                     <Item id={index} nombre={poke.name}/>
                 </div>
             ))
