@@ -3,6 +3,7 @@ import './App.css';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
 import Navbar from './Components/Navbar/Navbar';
 import Api from './Components/componente/Api'
+import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
 
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
         {/* <Api/> */}
       </header>
       <div className='container m-auto'>
-          <ItemListContainer greeting={"Hola soy un greeting"}/>
+          {/* <ItemListContainer greeting={"Hola soy un greeting"}/> */}
+          <ItemDetailContainer/>
       </div>
     </>
   );

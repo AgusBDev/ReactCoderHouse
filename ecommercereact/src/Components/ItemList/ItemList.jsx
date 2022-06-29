@@ -22,7 +22,7 @@ export default function ItemList() {
             pokemon.map( (poke, index) => (
                 <div className=''>     
                     {console.log(index)}           
-                    <Item id={index} nombre={poke.name}/>
+                    <Item key={index} id={index} nombre={poke.name}/>
                 </div>
             ))
         }
