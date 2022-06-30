@@ -1,0 +1,93 @@
+
+    {
+      "productos":[
+          {
+              "id":1,
+              "Marca": "Adidas",
+              "Modelo": "Predator",
+              "Precio": 15000,
+              "Stock": 15,
+              "img": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/43f647a901a84fa2a5e3adf000ebc4e0_9366/Botines_Predator_Edge.4_Sock_Multiterreno_Azul_GW2355_01_standard.jpg"
+          },
+          {
+              "id":2,
+              "Marca": "Nike",
+              "Modelo": "Venom",
+              "Precio": 13500,
+              "Stock": 20,
+              "img": "https://www.dexter.com.ar/on/demandware.static/-/Sites-dabra-catalog/default/dwa1c69b16/products/NI_AO8738-600/NI_AO8738-600-1.JPG"
+          },
+          {
+              "id":3,
+              "Marca": "Puma",
+              "Modelo": "Evo Speed",
+              "Precio": 11200,
+              "Stock": 37,
+              "img": "https://www.tradeinn.com/f/13830/138306267/puma-botas-futbol-evo-speed-1-fg.jpg"
+          },
+          {
+              "id":4,
+              "Marca": "Nike",
+              "Modelo": "Tiempo",
+              "Precio": 16900,
+              "Stock": 7,
+              "img": "https://newsport.vteximg.com.br/arquivos/ids/11766152-1000-1000/CZ8482176-A.jpg?v=637747425694670000"
+          },
+          {
+              "id":5,
+              "Marca": "Munich",
+              "Modelo": "Gresca",
+              "Precio": 9500,
+              "Stock": 55,
+              "img": "https://cdn.flickhockey.com/16745/zapatillas-sala-munich-gresca-03-azul.jpg"
+          },
+          {
+              "id":6,
+              "Marca": "Joma",
+              "Modelo": "Top Flex",
+              "Precio": 8500,
+              "Stock": 15,
+              "img": "https://http2.mlstatic.com/D_NQ_NP_726360-MLA40594563194_012020-O.webp"
+          },
+          {
+              "id":7,
+              "Marca": "Nike",
+              "Modelo": "R10",
+              "Precio": 19000,
+              "Stock": 15,
+              "img": "https://images.stockx.com/images/Nike-10R-Tiempo-Legend-7-Pro-IC-Black-Light-Orewood-Brown.png?fit=fill&bg=FFFFFF&w=480&h=320&fm=webp&auto=compress&dpr=2&trim=color&updated_at=1626899191&q=75"
+          },
+          {
+              "id":8,
+              "Marca": "Adidas",
+              "Modelo": "Copa",
+              "Precio": 10000,
+              "Stock": 16,
+              "img": "https://assets.adidas.com/images/w_600,f_auto,q_auto/05abd292b82a42c6abb1ad2600796f81_9366/Botines_Copa_Sense.3_Terreno_Firme_Rojo_FY6196_01_standard.jpg"
+          },
+          {
+              "id":9,
+              "Marca": "Nike",
+              "Modelo": "Mercurial",
+              "Precio": 15000,
+              "Stock": 15,
+              "img": "https://www.digitalsport.com.ar/files/products/6138ea8255a36-533994-1200x1200.jpg"
+          },
+          {
+              "id":10,
+              "Marca": "Nike",
+              "Modelo": "Phantom",
+              "Precio": 11000,
+              "Stock": 44,
+              "img": "https://www.opensports.com.ar/media/catalog/product/cache/4769e4d9f3516e60f2b4303f8e5014a8/C/W/CW6589-160_0.jpg"
+          },
+          {
+              "id": 11,
+              "Marca": "Adidas",
+              "Modelo": "Nemezis",
+              "Precio": 13200,
+              "Stock": 15,
+              "img": "https://assets.adidas.com/images/w_600,f_auto,q_auto/97d594a410ac4bb9a1a2ab2200c0b485_9366/Botines_Nemeziz_19.1_Terreno_Firme_Blanco_EG7325_01_standard.jpg"
+          }
+      ]
+  }

@@ -1,15 +1,21 @@
 import React, { useState, useEffect } from 'react'
 import ItemDetail from '../ItemDetail/ItemDetail'
+import { useParams } from "react-router-dom";
 
 export default function ItemDetailContainer() {
-    const getItem = { nombre: 'Zapatilla Marca Pirulo', precio: '14500', descripcion: 'Comodidad total, velocidad sin limites, las altas llantas definitivas', stock: 10};
 
+    const {idItem} = useParams(); 
+    const url = 'http://localhost:3000/productos/' + idItem;
+    console.log(url)
     const [producto, setProducto] = useState([]);
+    
 
-    useEffect(() => {
-        setTimeout(() => {
-            setProducto(productoObj);    
-        }, 1000);        
+     useEffect(() => {      
+        fetch(url)
+        .then(response => response.json())
+        .then(data => (           
+            setProducto(data)
+        ));        
     }, [])
     
     return (

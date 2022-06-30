@@ -11,7 +11,7 @@ export default function ItemCount( { stock, initial } ) {
         }else{
           return cant;
         }        
-      }
+    }
 
     const [maxStock, setMaxStock] = useState();
     const [cant, setCant] = useState(0);
