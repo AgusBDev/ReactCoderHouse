@@ -14,7 +14,6 @@ export default function ItemDetail( { producto } ) {
                     <h6>{producto.descripcion}</h6>
                 </div>
                 <div className='px-2 my-5'> 
-                    {console.log(producto.Stock)}
                     <ItemCount stock={producto.Stock}/>
                 </div>
             </div>

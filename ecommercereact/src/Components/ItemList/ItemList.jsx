@@ -13,15 +13,15 @@ export default function ItemList() {
         .then(response => response.json())
         .then(data => (           
             setProducto(data)
-        ));        
-    }, [])
+            ));        
+        }, [])
 
     return (
     <div className='grid grid-cols-4 gap-20'>
         {
             producto.map( prod => (
-                <div className=''>                                 
-                    <Item key={prod.id} producto={prod}/>
+                <div className='' key={prod.id}>                                 
+                    <Item  producto={prod}/>
                 </div>
             ))
         }

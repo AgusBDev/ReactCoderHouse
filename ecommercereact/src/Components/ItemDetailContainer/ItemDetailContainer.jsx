@@ -6,7 +6,7 @@ export default function ItemDetailContainer() {
 
     const {idItem} = useParams(); 
     const url = 'http://localhost:3000/productos/' + idItem;
-    console.log(url)
+
     const [producto, setProducto] = useState([]);
     
 
@@ -15,7 +15,7 @@ export default function ItemDetailContainer() {
         .then(response => response.json())
         .then(data => (           
             setProducto(data)
-        ));        
+            ));        
     }, [])
     
     return (

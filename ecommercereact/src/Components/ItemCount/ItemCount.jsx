@@ -5,7 +5,6 @@ import './ItemCount.css'
 export default function ItemCount( { stock, initial } ) {
 
     const onAdd = ( num, cant, stock ) => {
-        console.log(num);
         if(cant + (num) >= 0 && cant + (num) <= stock){
           return(cant + (num));
         }else{
@@ -13,12 +12,12 @@ export default function ItemCount( { stock, initial } ) {
         }        
     }
 
-    const [maxStock, setMaxStock] = useState();
+    const [maxStock, setMaxStock] = useState(0);
     const [cant, setCant] = useState(0);
     
     useEffect(() => {
         setMaxStock(stock);
-    }, []);
+    }, [stock]);
 
     if(stock > 0){
         return (    
