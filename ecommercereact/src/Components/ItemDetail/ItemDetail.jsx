@@ -1,7 +1,20 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import ItemCount from '../ItemCount/ItemCount'
 
 export default function ItemDetail( { producto } ) {
+
+    const onAdd = ( quantityToAdd ) => {
+        alert("Se han agregado " + quantityToAdd + " unidades de " + producto.Marca + " " + producto.Modelo );
+        setCount(<p>Producto agregado con exito</p>);
+    }
+    
+    const[count, setCount] = useState(<></>);  
+
+    useEffect(() => {
+        setCount(<ItemCount stockProducto={producto.Stock} onAdd={onAdd}/>);
+    }, [producto])
+
+
     return (
         <div className='flex flex-row items-center'>
             <div className='w-1/2'>
@@ -14,7 +27,7 @@ export default function ItemDetail( { producto } ) {
                     <h6>{producto.descripcion}</h6>
                 </div>
                 <div className='px-2 my-5'> 
-                    <ItemCount stock={producto.Stock}/>
+                    {count}
                 </div>
             </div>
         </div>
