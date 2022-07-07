@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import ItemCount from '../ItemCount/ItemCount'
+import { useContext } from 'react';
+import { myContext } from '../../Context/CartContext';
 
 export default function ItemDetail( { producto } ) {
 
+    const { addItem } = useContext(myContext);
+
     const onAdd = ( quantityToAdd ) => {
+        addItem(producto, quantityToAdd);
         alert("Se han agregado " + quantityToAdd + " unidades de " + producto.Marca + " " + producto.Modelo );
         setCount(<p>Producto agregado con exito</p>);
     }

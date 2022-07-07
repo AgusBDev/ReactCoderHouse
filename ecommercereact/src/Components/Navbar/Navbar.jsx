@@ -9,13 +9,13 @@ function Navbar() {
         <nav className="flex mt-4 items-center w-full">
             <ul className="text-sm flex justify-start w-1/3">
                 <li className="py-1">                                    
-                    <MenuButton icon={<HomeIcon className='w-5 mr-2'/>} name={"Inicio"}/>                                                      
+                    <MenuButton icon={<HomeIcon className='w-5 mr-2'/>} name={"Inicio"} href="/"/>                                                      
                 </li>
                 <li className="py-1">
-                    <MenuButton icon={<ArchiveIcon className='w-5 mr-2'/>} name={"Productos"}/>
+                    <MenuButton icon={<ArchiveIcon className='w-5 mr-2'/>} name={"Productos"} href="#"/>
                 </li>
                 <li className="py-1">
-                    <MenuButton icon={<InboxInIcon className='w-5 mr-2'/>} name={"Contacto "}/>
+                    <MenuButton icon={<InboxInIcon className='w-5 mr-2'/>} name={"Contacto "} href="#"/>
                 </li>
             </ul>
             <div className="flex justify-center items-center mx-auto w-1/3">
