@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { PlusIcon, MinusIcon } from '@heroicons/react/outline'
 import './ItemCount.css'
 
-export default function ItemCount( { stockProducto, onAdd } ) {
+export default function ItemCount( { stockProducto, onAdd, muestraBoton, defaultQuantity } ) {
 
     const verificarCantidad = ( num ) => {
         if(quantityToAdd + (num) >= 0 && quantityToAdd + (num) <= stock){
@@ -12,15 +12,17 @@ export default function ItemCount( { stockProducto, onAdd } ) {
 
     const [stock, setStock] = useState(0);
     const [quantityToAdd, setQuantityToAdd] = useState(0);
-    
+    const [showButton, setshowButton] = useState(true);
+
     useEffect(() => {
-        console.log(stockProducto);
-        setStock(stockProducto);
+        setStock(stockProducto == undefined ? 0 : stockProducto);
+        setQuantityToAdd( defaultQuantity == undefined ? 0 : defaultQuantity);
+        setshowButton(muestraBoton);
     }, [stockProducto]);
 
     //if(stock > 0){
         return (    
-                <div className='flex flex-col items-center my-2'>
+                <div className='flex flex-col justify-center items-center my-2'>
                     <div className="flex justify-center my-2 mx-4 shadow-lg rounded-lg border">
                         <span className='text-center'>
                             <a href="#" onClick={ (e) => (
@@ -42,11 +44,13 @@ export default function ItemCount( { stockProducto, onAdd } ) {
                             </a>
                         </span>    
                     </div>
-                    <div className=''>
-                        <button onClick={()=> onAdd( quantityToAdd )} className='border shadow-lg rounded-lg my-2 w-max bg-black'>
-                            <p className='mx-6 text-white '>Agregar al carrito</p>
-                        </button>
-                    </div>
+                    {showButton && (
+                        <div className=''>
+                            <button onClick={()=> onAdd( quantityToAdd )} className='border shadow-lg rounded-lg my-2 w-max bg-black'>
+                                <p className='mx-6 text-white '>Agregar al carrito</p>
+                            </button>
+                        </div>) 
+                    }
                 </div>
         )
    //}else{

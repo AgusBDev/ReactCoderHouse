@@ -7,7 +7,6 @@ export default function ItemList() {
     const url = 'http://localhost:3000/productos';
 
     const [producto, setProducto] = useState([]);
-    console.log(producto);
     useEffect(() => {      
         fetch(url)
         .then(response => response.json())

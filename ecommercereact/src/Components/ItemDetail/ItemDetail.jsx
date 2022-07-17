@@ -1,31 +1,29 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import ItemCount from '../ItemCount/ItemCount'
-import { useContext } from 'react';
-import { myContext } from '../../Context/CartContext';
+import { cartContext } from '../../Context/CartContext';
 
 export default function ItemDetail( { producto } ) {
 
-    const { addItem } = useContext(myContext);
+    const { addItem } = useContext(cartContext);
 
     const onAdd = ( quantityToAdd ) => {
         addItem(producto, quantityToAdd);
-        alert("Se han agregado " + quantityToAdd + " unidades de " + producto.Marca + " " + producto.Modelo );
-        setCount(<p>Producto agregado con exito</p>);
+        //setCount(<p>Producto agregado con exito</p>);
     }
     
     const[count, setCount] = useState(<></>);  
 
     useEffect(() => {
-        setCount(<ItemCount stockProducto={producto.Stock} onAdd={onAdd}/>);
+        setCount(<ItemCount stockProducto={producto.Stock} onAdd={onAdd} muestraBoton={true} defaultQuantity={0}/>);
     }, [producto])
 
 
     return (
-        <div className='flex flex-row items-center'>
-            <div className='w-1/2'>
-                <img src={producto.img} alt="" className=''/>
+        <div className='flex flex-row justify-center align-middle h-1/2 mt-10'>
+            <div className=''>
+                <img src={producto.img} alt="" className='object-contain w-72 h-72'/>
             </div>
-            <div className='w-1/2 shadow-lg rounded-lg'>
+            <div className='w-1/2 shadow-lg rounded-lg p-6'>
                 <div className='px-2'>
                     <h2 className='text-6xl'>{producto.Marca + " " + producto.Modelo}</h2>
                     <h4 className='text-2xl my-4'>${producto.Precio}</h4>

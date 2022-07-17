@@ -12,10 +12,10 @@ function Navbar() {
                     <MenuButton icon={<HomeIcon className='w-5 mr-2'/>} name={"Inicio"} href="/"/>                                                      
                 </li>
                 <li className="py-1">
-                    <MenuButton icon={<ArchiveIcon className='w-5 mr-2'/>} name={"Productos"} href="#"/>
+                    <MenuButton icon={<ArchiveIcon className='w-5 mr-2'/>} name={"Productos"} href="/"/>
                 </li>
                 <li className="py-1">
-                    <MenuButton icon={<InboxInIcon className='w-5 mr-2'/>} name={"Contacto "} href="#"/>
+                    <MenuButton icon={<InboxInIcon className='w-5 mr-2'/>} name={"Contacto"} href="#"/>
                 </li>
             </ul>
             <div className="flex justify-center items-center mx-auto w-1/3">

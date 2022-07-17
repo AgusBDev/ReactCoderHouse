@@ -15,12 +15,12 @@ export default function ItemDetailContainer() {
         .then(response => response.json())
         .then(data => (           
             setProducto(data)
-            ));        
+        ));        
     }, [])
     
     return (
         
-        <div>
+        <div className='max-h-80'>
             <ItemDetail producto = {producto}/>
         </div>
     )
